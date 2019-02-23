@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // If you declare the variable let and do the same task, you will get undefined as the output because it is a scoped variable
+
+    var vehicleName = "<br>Mercedez";
+
+    var printVehicleName = function () {
+        document.write(this.vehicleName);
+    };
+
+    // var Vehicle = {
+    //     vehicleName : "Nissan",
+    //     getVehicleName : printVehicleName
+    // };
+    //
+    // Vehicle.getVehicleName();
+
+    printVehicleName();
+
+
+    // By using this
+
+    var Vehicle = {
+        vehicleName : "<br>Nissan",
+        getVehicleName : printVehicleName
+    };
+
+    Vehicle.getVehicleName();
+
+
+
+</script>
+
+</body>
+</html>

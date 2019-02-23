@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function printAllUsers(){
+
+        var responseObj = JSON.parse(this.responseText);
+        console.log(responseObj);
+
+    };
+
+    var request = new XMLHttpRequest();
+    // If you use braces like
+    //request.onload = printAllUsers();
+    // This gives an error
+    request.onload = printAllUsers;
+    request.open('get','https://api.github.com/users',true);
+    request.send();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var getText_1 = (taxPercentage) =>  Amt => {
+
+            return Amt *= (1 + taxPercentage);
+
+    };
+
+
+    // OR
+
+    var getText_2 = (taxPercentage) =>  function (Amt) {
+
+        return Amt *= (1 + taxPercentage);
+
+    };
+    var TaxPercentage_1 = getText_1(0.1);
+    var TaxPercentage_2 = getText_2(0.2);
+
+
+    document.write("Tax for Rs.1000 is " + TaxPercentage_1(1000));
+    document.write("<br>Tax for Rs.1000 is " + TaxPercentage_2(1000));
+</script>
+
+</body>
+</html>

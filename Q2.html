@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function exampleFunc() {
+        console.log("Hello World");
+
+    }
+    var Person = {
+        name : "Dilan Suraj",
+        age : 22,
+        "full address":"Kahanthota Road, Malabe",
+        school : "D.S.S.C",
+        functionName : function () {
+            console.log("I am a function");
+        }(),
+        helloFunction : exampleFunc(),
+
+
+
+    };
+
+    document.write("Name is " + Person.name);
+    document.write(`<br> Age is ${Person.age}`);
+    document.write("<br>School is "+ Person.school);
+    document.write("<br>Executed function Check the console");
+    Person.functionName;
+    Person.helloFunction;
+</script>
+
+</body>
+</html>
